@@ -25,6 +25,8 @@ client_profiles[icon:user-cog, color: Green]{
   user_id PK FK
   goal VARCHAR(255)
   activity_level ENUM ("BEGINNER","INTERMEDIATE","ADVANCED")
+  height VARCHAR(20) NOT NULL
+  weight VARCHAR(20) NOT NULL
   diet_preference TEXT
   medical_conditions TEXT
 }
@@ -122,9 +124,6 @@ checkins.id < progress_logs.checkinid
 
 subscriptions.id < payments.subscriptionid
 users.id < payments.clientid
-
-
-
 
 
 
